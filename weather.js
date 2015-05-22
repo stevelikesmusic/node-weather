@@ -19,7 +19,7 @@ var forecastCallback = function(lat, lng) {
   });
 }
 
-function getLoc(address) {
+function getForecast(address) {
   var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyDhAB6yN4yqFEHb7Vmo30blQP6i5PemN2I";
   var request = https.get(url, function(response) {
       var body = "";
@@ -50,11 +50,9 @@ function getLoc(address) {
   });
 }
 
-getLoc(address);
-//forecastCallback(34, -9);
+//getLoc(address);
 
-
-//module.exports.getLoc = getLoc;
+module.exports.getForecast = getForecast;
 
 
 
